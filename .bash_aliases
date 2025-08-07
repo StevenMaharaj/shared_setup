@@ -11,3 +11,6 @@ alias sv="source .venv/bin/activate"
 alias dv="deactivate"
 
 alias dcp="docker compose"
+alias tn="tmux new -s"
+alias ta="tmux attach -t"
+alias tl="tmux ls"
