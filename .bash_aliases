@@ -16,3 +16,4 @@ alias ta="tmux attach -t"
 alias tl="tmux ls"
 alias cip="curl ifconfig.me | xclip -selection clipboard" 
 alias cpc="xclip -selection clipboard" 
+alias mmdc='mmdc --puppeteerConfigFile ~/shared_setup/puppeteer-no-sandbox.json'
