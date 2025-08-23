@@ -33,12 +33,12 @@ section {
   background: var(--bg-light);
   font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   color: var(--text-primary);
-  padding: 60px 80px;
+  padding: 30px 40px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  line-height: 1.6;
-  font-size: 24px;
+  justify-content: flex-start;
+  line-height: 1.4;
+  font-size: 18px;
   position: relative;
   overflow: hidden;
 }
@@ -56,15 +56,6 @@ section::before {
   z-index: -1;
 }
 
-section::after {
-  content: '✨';
-  position: absolute;
-  top: 20px;
-  right: 30px;
-  font-size: 40px;
-  animation: sparkle 3s ease-in-out infinite;
-  z-index: 1;
-}
 
 @keyframes float {
   0%, 100% { transform: translateY(0px) rotate(0deg); }
@@ -82,48 +73,26 @@ h1 {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  font-size: 3.5em;
+  font-size: 2.5em;
   font-weight: 800;
-  margin-bottom: 0.5em;
+  margin-bottom: 0.3em;
   text-align: center;
   position: relative;
-  line-height: 1.2;
+  line-height: 1.1;
 }
 
-h1::before {
-  content: '🚀 ';
-  -webkit-text-fill-color: initial;
-  background: none;
-  font-size: 0.8em;
-  vertical-align: middle;
-}
-
-h1::after {
-  content: ' 🚀';
-  -webkit-text-fill-color: initial;
-  background: none;
-  font-size: 0.8em;
-  vertical-align: middle;
-}
 
 h2 {
   background: var(--secondary-gradient);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  font-size: 2.5em;
+  font-size: 1.8em;
   font-weight: 700;
-  margin-bottom: 0.8em;
+  margin-bottom: 0.4em;
   position: relative;
 }
 
-h2::before {
-  content: '💡 ';
-  -webkit-text-fill-color: initial;
-  background: none;
-  font-size: 0.8em;
-  vertical-align: middle;
-}
 
 h3 {
   background: var(--accent-gradient);
@@ -135,19 +104,12 @@ h3 {
   margin-bottom: 0.6em;
 }
 
-h3::before {
-  content: '⭐ ';
-  -webkit-text-fill-color: initial;
-  background: none;
-  font-size: 0.8em;
-  vertical-align: middle;
-}
 
 /* Paragraphs and text */
 p {
-  margin-bottom: 1.2em;
+  margin-bottom: 0.8em;
   font-weight: 400;
-  line-height: 1.7;
+  line-height: 1.5;
 }
 
 /* Strong text with emoji enhancement */
@@ -167,29 +129,17 @@ ul, ol {
 }
 
 li {
-  background: var(--bg-light);
-  margin: 1em 0;
-  padding: 20px 30px;
-  border-radius: var(--border-radius-small);
-  box-shadow: var(--shadow-soft);
+  margin: 0.3em 0;
+  padding: 0;
   list-style: none;
   position: relative;
-  transform: translateX(0);
-  transition: all 0.3s ease;
-  border-left: 5px solid;
-  border-image: var(--success-gradient) 1;
 }
 
 li::before {
-  content: '✅ ';
-  font-size: 1.2em;
-  margin-right: 10px;
+  content: '• ';
+  font-size: 1em;
+  margin-right: 8px;
 }
-
-li:nth-child(2n)::before { content: '🎯 '; }
-li:nth-child(3n)::before { content: '💪 '; }
-li:nth-child(4n)::before { content: '🔥 '; }
-li:nth-child(5n)::before { content: '⚡ '; }
 
 /* Blockquotes */
 blockquote {
@@ -205,15 +155,6 @@ blockquote {
   position: relative;
 }
 
-blockquote::before {
-  content: '💬 "';
-  font-size: 1.5em;
-}
-
-blockquote::after {
-  content: '" 💭';
-  font-size: 1.5em;
-}
 
 /* Code blocks */
 pre {
@@ -234,21 +175,6 @@ pre {
   background-image: repeating-linear-gradient(135deg,rgba(255,106,0,0.08) 0 10px,transparent 10px 20px);
 }
 
-pre::before {
-
-  content: '💻 Code';
-  position: absolute;
-  top: 10px;
-  right: 28px;
-  font-size: 1em;
-  background: var(--warning-gradient);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  font-weight: 700;
-  letter-spacing: 1px;
-  text-shadow: 0 2px 8px rgba(255,106,0,0.15);
-}
 
 code {
   font-family: 'Fira Code', 'JetBrains Mono', 'Courier New', monospace;
@@ -290,10 +216,6 @@ th {
   position: relative;
 }
 
-th::before {
-  content: '👑 ';
-  margin-right: 8px;
-}
 
 td {
   background: var(--bg-light);
@@ -325,12 +247,6 @@ a {
   position: relative;
 }
 
-a::after {
-  content: ' 🔗';
-  -webkit-text-fill-color: initial;
-  background: none;
-  font-size: 0.8em;
-}
 
 /* Special slide types */
 
