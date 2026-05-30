@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+# workspace.sh — opens a tmux session with 5 named windows
+
+SESSION="workspace"
+WORKING_DIR="$(pwd)"
+HOME_DIR="$HOME"
+
+tmux kill-session -t "$SESSION" 2>/dev/null
+
+tmux new-session -d -s "$SESSION" -n "Claude1" -c "$WORKING_DIR"
+tmux send-keys -t "$SESSION:Claude1" "claude" Enter
+
+tmux new-window -t "$SESSION" -n "Claude2" -c "$WORKING_DIR"
+tmux send-keys -t "$SESSION:Claude2" "claude" Enter
+
+tmux new-window -t "$SESSION" -n "Terminal" -c "$WORKING_DIR"
+
+tmux new-window -t "$SESSION" -n "Terminal2" -c "$WORKING_DIR"
+
+tmux new-window -t "$SESSION" -n "Home" -c "$HOME_DIR"
+
+tmux select-window -t "$SESSION":1
+tmux attach-session -t "$SESSION"
